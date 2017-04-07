@@ -253,7 +253,7 @@ public class DateUtils {
 	public static Date parseTime(String strTime) throws ParseException{
 		// sostituisco eventuale '.' con ':'
 		String strTimeStandard = strTime != null ? strTime.replace('.', ':') : null;
-		return strTimeStandard != null ? defaultSimpleTimeFormat.parse(strTimeStandard) : null;
+		return strTimeStandard != null ? EXTENDED_STANDARD_DATE_FORMAT.parse(strTimeStandard) : null;
 	}
 	
 	
@@ -522,6 +522,6 @@ public class DateUtils {
 	}
 	
 	public static String parseStringTimestamp(Date dateDate){
-		return dateDate != null ? timestampFormat24H.format(dateDate) : "";
+		return dateDate != null ? EXTENDED_INVERTED_DATE_FORMAT.format(dateDate) : "";
 	}
 }
