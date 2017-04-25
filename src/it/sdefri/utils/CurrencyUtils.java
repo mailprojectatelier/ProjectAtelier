@@ -12,7 +12,6 @@ import java.text.DecimalFormatSymbols;
  */
 public class CurrencyUtils {
 	 
-//	public static String numberToString(double amount){
 	public static String numberToString(Double amountObj){
 		
 		double amount = 0.0;
